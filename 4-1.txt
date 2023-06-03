@@ -1,0 +1,34 @@
+ Proc 18. Описать функцию CircleS(R) вещественного типа, находящую площадь круга радиуса R (R — вещественное). 
+ С помощью этой функции найти площади трех кругов с данными радиусами. Площадь круга радиуса R вычисляется по формуле S=π⋅R2. В качестве значения π использовать 3.14
+
+#include <iostream>
+using namespace std;
+double CircleS(double R) {
+    const double PI = 3.14;
+    double S = PI*R*R;
+    return S;
+}
+
+int main() {
+    double radius1, radius2, radius3;
+
+    cout << "введіть радіус першого кола: ";
+    cin >> radius1;
+
+    cout << "введіть радіус другого кола: ";
+    cin >> radius2;
+
+    cout << "введіть радіус третього кола: ";
+    cin >> radius3;
+
+    double area1 = CircleS(radius1);
+    double area2 = CircleS(radius2);
+    double area3 = CircleS(radius3);
+
+    cout << "площа першого кола:" << area1 <<endl;
+    cout << "площа другого кола: " << area2 << endl;
+    cout << "площа третього кола:" << area3 << endl;
+
+    return 0;
+}
+    
